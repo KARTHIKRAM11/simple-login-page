@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Forgot Password</title>
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; margin: 0; height: 100vh; background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover; display: flex; justify-content: center; align-items: center; position: relative; }
+    .overlay { position: absolute; inset: 0; background: rgba(0, 0, 0, 0.4); }
+    .box { position: relative; z-index: 1; background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%); color: white; padding: 2rem 2.5rem; border-radius: 20px; width: 360px; text-align: center; box-shadow: 0 12px 25px rgba(0,0,0,0.3); animation: fadeIn 1s ease-in; }
+    .box h2 { margin-bottom: 1rem; }
+    .box input[type="email"] { width: 100%; padding: 0.8rem; border-radius: 10px; border: none; margin: 1rem 0; font-size: 1rem; background: rgba(255, 255, 255, 0.2); color: #fff; }
+    .box input::placeholder { color: #eee; }
+    .box button { padding: 0.8rem; width: 100%; background: linear-gradient(to right, #fbc2eb, #a6c1ee); color: #fff; border: none; border-radius: 10px; font-size: 1rem; cursor: pointer; }
+    .box a { display: block; margin-top: 1rem; color: #fff; text-decoration: underline; font-size: 0.9rem; }
+    @keyframes fadeIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
+  </style>
+</head>
+<body>
+  <div class="overlay"></div>
+
+  <div class="box">
+    <h2>Reset Password</h2>
+    <p>Enter your email and we'll send you reset instructions</p>
+    <form id="resetForm">
+      <input type="email" placeholder="Your Email" required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Enter a valid email" />
+      <button type="submit">Send Reset Link</button>
+    </form>
+    <a href="login.html">Back to Login</a>
+  </div>
+</body>
+</html>
